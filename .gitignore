@@ -1,0 +1,11 @@
+# IntelliJ IDEA
+.idea/
+out/
+*.iml
+
+# Java
+*.class
+
+# Excel lock files
+~$*.xlsx
+~$*.ods
