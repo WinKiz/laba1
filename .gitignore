@@ -5,6 +5,9 @@ out/
 
 # Java
 *.class
+build/
+dist/
+nbproject/private/
 
 # Excel lock files
 ~$*.xlsx

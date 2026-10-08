@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Lab1" default="run" basedir=".">
+    <property name="run.args" value=""/>
+    <target name="compile">
+        <mkdir dir="build/classes"/>
+        <javac srcdir="." destdir="build/classes" includes="Lab1.java"
+               source="1.8" target="1.8" encoding="UTF-8" includeantruntime="false"/>
+    </target>
+    <target name="run" depends="compile">
+        <java classname="Lab1" fork="true" failonerror="true">
+            <classpath path="build/classes"/>
+            <jvmarg value="-Dfile.encoding=UTF-8"/>
+            <jvmarg value="-Dstdout.encoding=UTF-8"/>
+            <jvmarg value="-Dstderr.encoding=UTF-8"/>
+            <arg line="${run.args}"/>
+        </java>
+    </target>
+    <target name="run-full" depends="compile">
+        <java classname="Lab1" fork="true" failonerror="true">
+            <classpath path="build/classes"/>
+            <jvmarg value="-Dfile.encoding=UTF-8"/>
+            <jvmarg value="-Dstdout.encoding=UTF-8"/>
+            <jvmarg value="-Dstderr.encoding=UTF-8"/>
+        </java>
+    </target>
+    <target name="jar" depends="compile">
+        <mkdir dir="dist"/>
+        <jar destfile="dist/Lab1.jar" basedir="build/classes">
+            <manifest><attribute name="Main-Class" value="Lab1"/></manifest>
+        </jar>
+    </target>
+    <target name="clean">
+        <delete dir="build"/>
+        <delete dir="dist"/>
+    </target>
+    <target name="rebuild" depends="clean,jar"/>
+</project>

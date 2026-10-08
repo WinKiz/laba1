@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>org.netbeans.modules.ant.freeform</type>
+    <configuration>
+        <general-data xmlns="http://www.netbeans.org/ns/freeform-project/1">
+            <name>Lab1</name>
+            <properties/>
+            <folders>
+                <source-folder>
+                    <label>Java Sources</label>
+                    <type>java</type>
+                    <location>.</location>
+                    <includes>Lab1.java</includes>
+                    <encoding>UTF-8</encoding>
+                </source-folder>
+            </folders>
+            <ide-actions>
+                <action name="build"><target>jar</target></action>
+                <action name="clean"><target>clean</target></action>
+                <action name="rebuild"><target>rebuild</target></action>
+                <action name="run"><target>run</target></action>
+            </ide-actions>
+            <view>
+                <items>
+                    <source-folder style="packages"><label>Java Sources</label><location>.</location></source-folder>
+                    <source-file><location>build.xml</location></source-file>
+                    <source-file><location>README.md</location></source-file>
+                </items>
+                <context-menu>
+                    <ide-action name="build"/>
+                    <ide-action name="rebuild"/>
+                    <ide-action name="clean"/>
+                    <ide-action name="run"/>
+                </context-menu>
+            </view>
+        </general-data>
+        <java-data xmlns="http://www.netbeans.org/ns/freeform-project-java/3">
+            <compilation-unit>
+                <package-root>.</package-root>
+                <built-to>build/classes</built-to>
+                <source-level>1.8</source-level>
+            </compilation-unit>
+        </java-data>
+    </configuration>
+</project>
